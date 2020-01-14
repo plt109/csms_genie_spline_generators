@@ -45,12 +45,18 @@ Each line contains
 4: Downward uncertainties without HERAPDF1.5 member 9 [pb]
 
 native_genie:
-full_package_10TeV_default_500knots.xml: Native GENIE splines
+full_package_10TeV_default_500knots.xml: Native GENIE splines (!!)
 null_list.txt: List of subchannels to be nulled out
 survive_list.txt: List of subchannels with values to be replaced by the CSMS cross section values
 
+!!: full_package_10TeV_default_500knots.xml too large to be uploaded to GitHub
+Please generate it yourself using 
+gmkspl -p 12,-12,14,-14,16,-16 -t 1000080160,1000010010 -e 10000 -o 'full_package_10TeV_default_500knots.xml'
+
 ###############################################################################
 All the scripts were written and tested using 
+
+GENIE 2.8.6
 
 Python 2.7.11 (v2.7.11:6d1b6a68f775, Dec  5 2015, 12:54:16) 
 [GCC 4.2.1 (Apple Inc. build 5666) (dot 3)] on darwin
